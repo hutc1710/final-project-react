@@ -1,0 +1,115 @@
+body {
+  font-style: inherit;
+}
+
+.box1 {
+  display: block;
+  justify-content: center;
+  padding: 40px;
+  justify-content: center;
+  background-color: rgb(70, 122, 186);
+  color: white;
+}
+
+.box2 {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  width: 600px;
+  height: 200px;
+  text-align: justify;
+}
+.box4 {
+  box-sizing: border-box;
+  background-color: rgb(75, 133, 192);
+  color: white;
+  width: 70%;
+  height: 250px;
+  margin-left: 15%;
+  margin-top: 100px;
+  padding: 50px;
+}
+.contentBox {
+  background-color: black;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.29;
+  font-size: 26px;
+  padding-left: 30%;
+  padding-top: 35px;
+  width: 100%;
+  height: 100px;
+}
+.contentBox2 {
+  font-style: inherit;
+  line-height: 1.29;
+  font-size: 36px;
+  padding-left: 21%;
+  padding-top: 35px;
+  color: black;
+  width: 100%;
+  height: 100px;
+}
+h1 {
+  font-size: 53px;
+}
+h4 {
+  font-size: 25px;
+}
+
+.btn2 {
+  margin-top: 40px;
+}
+
+.callIcon {
+  padding-bottom: 30px;
+  padding-right: 20px;
+}
+
+.blueLine {
+  background-color: rgb(33, 113, 255);
+  height: 10px;
+  width: 80%;
+  margin-left: 145px;
+  margin-top: 50px;
+  border-radius: 30px;
+}
+.icon {
+  color: rgb(33, 113, 255);
+}
+.box4 {
+  box-sizing: border-box;
+  background-color: rgb(75, 133, 192);
+  color: white;
+  width: 70%;
+  height: 250px;
+  padding-bottom: 80px;
+  text-align: center;
+  align-items: center;
+}
+.boxHeader {
+  font-size: 45px;
+  text-align: center;
+  align-items: center;
+}
+
+.boxContent {
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+.carouselContainer {
+  float: right;
+  margin-right: 50px;
+}
+img {
+  width: 400px;
+}
+.cards-container {
+  text-align: center;
+  align-items: center;
+}
+.headline {
+  text-align: center;
+  align-items: center;
+}

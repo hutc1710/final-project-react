@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+.contactHeader {
+  text-align: center;
+  font-size: 83px;
+  color: white;
+  line-height: 1.3;
+  background-color: #10387f;
+  height: 150px;
+  text-align: center;
+  padding: 10px;
+}
+
+.contentBox {
+  background-color: black;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.29;
+  font-size: 26px;
+  padding-left: 30%;
+  padding-top: 35px;
+  width: 100%;
+  height: 100px;
+}
+
+.callIcon {
+  padding-bottom: 30px;
+  padding-right: 20px;
+}
+
+.contactBox {
+  float: left;
+  width: 33.33%;
+  padding: 60px;
+  height: 300px;
+  text-align: center;
+}
+
+.infoContanier::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.contactIcon {
+  width: 50px;
+}
+.map {
+  text-align: center;
+}

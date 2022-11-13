@@ -1,0 +1,21 @@
+.img1 {
+  display: block;
+  width: 90%;
+  height: 500px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 80px;
+  border-radius: 75px;
+}
+
+.img2 {
+  display: block;
+  width: 90%;
+  height: 500px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 80px;
+  border-radius: 75px;
+}

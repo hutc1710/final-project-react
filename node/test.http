@@ -1,0 +1,148 @@
+@local = http://localhost:3003
+
+//Users//
+
+//Get all users:
+GET {{local}}/users/allUsers
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzU2MzczOThjNjc4NzYxMGYwNDY1ZmMiLCJlbWFpbCI6InNlbGxidXk0NDJAZ21haWwuY29tIiwiYWRtaW4iOnRydWUsImlhdCI6MTY2ODA3MTYxNH0.57YpfZY-cTvAfiNJRDsN7G_LDkkkFl5yKKh17ZWlBZc
+
+
+###Add new user:
+POST  {{local}}/users/signup
+Content-Type: application/json
+
+{
+    "name": "yoavoren1",
+    "city": "Nashville", 
+    "email": "yoavoren1@gmail.com",
+    "password": "yoavoren1151@",
+    "phone": "0548574861",
+    "admin": true,
+    "favoriteCards": [] 
+    }
+
+
+### Login user:
+POST  {{local}}/users/login
+Content-Type: application/json
+
+{
+     "email": "tony@gmail.com",
+    "password": "tony15151@"
+}
+
+
+### Get user by token:
+GET {{local}}/users/me
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzcwZjUwNTBhMDFkMGZhNmZiNzNiOTUiLCJlbWFpbCI6InRvbnlAZ21haWwuY29tIiwiYWRtaW4iOmZhbHNlLCJpYXQiOjE2NjgzNDcxNTd9.qH41tXC-g8fF_t9BH7CO62ffNAddui2XKUtf-OY7gZQ
+
+
+### Update user by email:
+PATCH {{local}}/users/update
+user-email:asaf@gmail.com
+Content-Type: application/json
+
+{
+  "name": "dana"
+}
+
+
+### Delete user by id:
+DELETE  {{local}}/users/deleteUser
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzcwZjUwNTBhMDFkMGZhNmZiNzNiOTUiLCJlbWFpbCI6InRvbnlAZ21haWwuY29tIiwiYWRtaW4iOmZhbHNlLCJpYXQiOjE2NjgzNDcxNTd9.qH41tXC-g8fF_t9BH7CO62ffNAddui2XKUtf-OY7gZQ
+user-id: 636ede84fcd2e77999689024
+
+
+### Forgot pwd:
+POST {{local}}/users/forgotPassword
+Content-Type: application/json
+
+{
+    "email": "Timothy@gmail.com"
+}
+
+
+###Add new user message:
+POST {{local}}/msgs/newMsg
+Content-Type: application/json
+
+{
+    "name": "yoav",
+    "email": "yoav@gmail.com",
+    "msg": "your service is very good"
+}
+
+
+
+///////////////Cards///////////////
+
+### Get all cards:
+GET {{local}}/cards/allCards
+
+
+
+
+
+### Add new card:
+POST {{local}}/cards
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzcwZjUwNTBhMDFkMGZhNmZiNzNiOTUiLCJlbWFpbCI6InRvbnlAZ21haWwuY29tIiwiYWRtaW4iOmZhbHNlLCJpYXQiOjE2NjgzNDcxNTd9.qH41tXC-g8fF_t9BH7CO62ffNAddui2XKUtf-OY7gZQ
+Content-Type: application/json
+
+{
+    
+    "image": "https://airductnashville.com/wp-content/uploads/2018/06/client03-free-img.png",
+    "description": " The service of Nashville Air Duct Cleaners was top notch. The technician was on time, friendly, and very helpful in showing us how the process worked. Our air ducts look great, and he even showed us pictures of our clean ducts after he was done. I would for sure recommend them to my friend and family.",
+    "price": "250"
+   
+   
+}
+
+
+### Find card by id:
+Get {{local}}/cards/myCard
+id-card: 636a106e745dd0eea4ffe472
+
+
+### Update card by id:
+PATCH  {{local}}/cards/myCard
+id-card: 63703bd59248d52763421885
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzcwM2JhMDkyNDhkNTI3NjM0MjE4ODAiLCJlbWFpbCI6ImFzYWZAZ21haWwuY29tIiwiYWRtaW4iOmZhbHNlLCJpYXQiOjE2NjgzNDYwNDl9.Y4Iq7QCyCIVFO8NFx2SYPm6yfLaEB-0YSJENdZnEmkY
+
+{
+    "price":"200"
+}
+
+
+### Dalate card by id:
+DELETE  {{local}}/cards/myCard
+id-card: 63703bd59248d52763421885
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzcwM2JhMDkyNDhkNTI3NjM0MjE4ODAiLCJlbWFpbCI6ImFzYWZAZ21haWwuY29tIiwiYWRtaW4iOmZhbHNlLCJpYXQiOjE2NjgzNDU1NjB9.6PFbk4lxCRx5X5tmwCG6BEocPPBGOsbpj9T2aIzTork
+
+### Get all user cards
+GET {{local}}/cards/myAllCards
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzVhM2QyMTE4Y2Q1MDhiZWY3YjNkNDciLCJlbWFpbCI6Ik1pa2VAZ21haWwuY29tIiwiYWRtaW4iOmZhbHNlLCJpYXQiOjE2NjgwNzE2NjR9.mgvsBunfI3BXE1YBEBwCr_TwtuaxUZW4Xbvz4qe6pmU
+
+
+### Get all user favorite cards:
+GET {{local}}/cards/favoriteCards
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzVhM2QyMTE4Y2Q1MDhiZWY3YjNkNDciLCJlbWFpbCI6Ik1pa2VAZ21haWwuY29tIiwiYWRtaW4iOmZhbHNlLCJpYXQiOjE2NjgwNzE2NjR9.mgvsBunfI3BXE1YBEBwCr_TwtuaxUZW4Xbvz4qe6pmU
+
+
+### Add new favorite card:
+PATCH {{local}}/cards/addFavorite
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzcwZjUwNTBhMDFkMGZhNmZiNzNiOTUiLCJlbWFpbCI6InRvbnlAZ21haWwuY29tIiwiYWRtaW4iOmZhbHNlLCJpYXQiOjE2NjgzNDcxNTd9.qH41tXC-g8fF_t9BH7CO62ffNAddui2XKUtf-OY7gZQ
+Content-Type: application/json
+
+{
+    "cardId": "6370f2f00a01d0fa6fb73b81"
+}
+
+
+### Remove favorite card:
+PATCH {{local}}/cards/removeFavorite
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzVhM2QyMTE4Y2Q1MDhiZWY3YjNkNDciLCJlbWFpbCI6Ik1pa2VAZ21haWwuY29tIiwiYWRtaW4iOmZhbHNlLCJpYXQiOjE2NjgwNzE2NjR9.mgvsBunfI3BXE1YBEBwCr_TwtuaxUZW4Xbvz4qe6pmU
+Content-Type: application/json
+
+{
+    "cardId": "636a106e745dd0eea4ffe472"
+}

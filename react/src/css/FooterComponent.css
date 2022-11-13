@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  float: left;
+  width: 33.33%;
+  padding: 40px;
+  height: 200px;
+}
+
+.footerInformation::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.footerIcon {
+  width: 50px;
+}
